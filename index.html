@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href='css/style.css'>
+   <title>Global</title>
+</head>
+
+<body>
+   <svg style="display: none;">
+      <symbol version="1.1" id="arrows" viewBox="0 0 447.243 447.243">
+         <path d="M420.361,192.229c-1.83-0.297-3.682-0.434-5.535-0.41H99.305l6.88-3.2c6.725-3.183,12.843-7.515,18.08-12.8l88.48-88.48
+      			c11.653-11.124,13.611-29.019,4.64-42.4c-10.441-14.259-30.464-17.355-44.724-6.914c-1.152,0.844-2.247,1.764-3.276,2.754
+      			l-160,160C-3.119,213.269-3.13,233.53,9.36,246.034c0.008,0.008,0.017,0.017,0.025,0.025l160,160
+      			c12.514,12.479,32.775,12.451,45.255-0.063c0.982-0.985,1.899-2.033,2.745-3.137c8.971-13.381,7.013-31.276-4.64-42.4
+      			l-88.32-88.64c-4.695-4.7-10.093-8.641-16-11.68l-9.6-4.32h314.24c16.347,0.607,30.689-10.812,33.76-26.88
+      			C449.654,211.494,437.806,195.059,420.361,192.229z" />
+      </symbol>
+   </svg>
+
+
+   <div class="container">
+      <header class="header">
+         <div class="header_logo">
+            <img src="./img/logo.png" alt="logo">
+            <h2>Global</h2>
+         </div>
+
+         <button class="btn" data-hireUs="pages__HireUs">Hire us</button>
+
+         <div class="btn__burger_wrapper">
+            <button class="btn__burger"></button>
+         </div>
+      </header>
+   </div>
+
+   <div class="menu__wrapper">
+      <div class="container">
+         <div class="menu">
+            <div class="menu__perspective_wrapper">
+               <div class="menu__viewPage">
+                  <img src="./img/pages/1_slide.png" alt="page" class="menu__viewPage_img">
+               </div>
+            </div>
+
+            <nav id="nav">
+               <ul>
+                  <li data-pageImg="./img/pages/1_slide.png"><span data-navLink="pages__Home">Home</span></li>
+                  <li data-pageImg="./img/pages/2_slide.png"><span data-navLink="pages__Works">Works</span></li>
+                  <li data-pageImg="./img/pages/3_slide.png"><span data-navLink="pages__About">About</span></li>
+                  <li data-pageImg="./img/pages/4_slide.png"><span data-navLink="pages__Contact">Contact</span></li>
+                  <li data-pageImg="./img/pages/5_slide.png"><span data-navLink="pages__HireUs">Hire us</span></li>
+               </ul>
+            </nav>
+
+         </div>
+      </div>
+   </div>
+
+   <div class="container" id="scene">
+      <main class="meinContent">
+         <aside class="dotsAside">
+            <div class="dotsAside__line">
+
+               <div class="circle circle--main circle--home " data-pageName="Home" data-pageNamber='01'>
+                  <div class="circle__click" data-className="pages__Home"></div>
+               </div>
+
+               <div class="circle"></div>
+               <div class="circle"></div>
+               <div class="circle"></div>
+
+               <div class="circle circle--main circle--works" data-pageName="Works" data-pageNamber='02'>
+                  <div class="circle__click" data-className="pages__Works"></div>
+               </div>
+
+               <div class="circle"></div>
+               <div class="circle"></div>
+               <div class="circle"></div>
+
+               <div class="circle circle--main circle--about" data-pageName="About" data-pageNamber='03'>
+                  <div class="circle__click" data-className="pages__About"></div>
+               </div>
+
+               <div class="circle"></div>
+               <div class="circle"></div>
+               <div class="circle"></div>
+
+               <div class="circle circle--main  circle--contact" data-pageName="Contact" data-pageNamber='04'>
+                  <div class="circle__click" data-className="pages__Contact"></div>
+               </div>
+
+               <div class="circle"></div>
+               <div class="circle"></div>
+               <div class="circle"></div>
+
+               <div class="circle circle--main circle--hireUs active" data-pageName="Hire Us" data-pageNamber='05'>
+                  <div class="circle__click" data-className="pages__HireUs"></div>
+               </div>
+
+            </div>
+         </aside>
+         <article class="pages">
+
+            <!-- page HOME -->
+            <section class="page pages__Home ">
+               <div class="pages__Home_top">
+                  <h3>Your next interactive experience</h3>
+                  <img src="./img/Home_page/astronaut.png" alt="astronaut">
+
+                  <a href="#" target="_blank" class="btn__whithArrows">
+                     <span>hire us</span>
+                     <svg class="arrows_svg">
+                        <use xlink:href="#arrows"></use>
+                     </svg>
+                     <div class="btn__whithArrows_blueBackground"></div>
+                  </a>
+               </div>
+
+               <div class="pages__Home_bottom">
+                  <div class="Home__bottom_inner">
+                     <h5>Metiew & Smith</h5>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                  </div>
+                  <div class="Home__bottom_inner">
+                     <h5>Fantasy interactive</h5>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                  </div>
+                  <div class="Home__bottom_inner">
+                     <h5>Paul & shark</h5>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                  </div>
+               </div>
+
+            </section>
+
+            <!-- page WORKS -->
+            <section class="page pages__Works">
+               <h3>Works</h3>
+            </section>
+
+            <!-- page ABOUT -->
+            <section class="page pages__About ">
+               <div class="pages__About_top">
+
+                  <div class="paralax__element paralax__element--cirqle"></div>
+                  <div class="paralax__element paralax__element--square"></div>
+                  <div class="paralax__element paralax__element--triangle"></div>
+                  <div class="paralax__element paralax__element--square2"></div>
+
+                  <h3>We<br> believe in passionate people</h3>
+
+                  <a href="#" target="_blank" class="btn__whithArrows">
+                     <span>Carrer</span>
+                     <svg class="arrows_svg">
+                        <use xlink:href="#arrows"></use>
+                     </svg>
+                     <div class="btn__whithArrows_blueBackground"></div>
+                  </a>
+               </div>
+
+               <div class="pages__About_bottom">
+                  <div class="About__bottom_inner">
+                     <img src="/img/About_page/winners.jpg" alt="history">
+                     <h5>Winners</h5>
+                  </div>
+                  <div class="About__bottom_inner">
+                     <img src="/img/About_page/philosophy.jpg" alt="history">
+                     <h5>Philosophy</h5>
+                  </div>
+                  <div class="About__bottom_inner">
+                     <img src="/img/About_page/history.jpg" alt="history">
+                     <h5>History</h5>
+                  </div>
+               </div>
+
+            </section>
+
+            <!-- page CONTACT -->
+            <section class="page pages__Contact">
+               <h3>Contacts</h3>
+            </section>
+
+            <!-- page HIRE US -->
+            <section class="page pages__HireUs active">
+               <h4 class="pages__HireUs_title">You want us to do</h4>
+               <form class="pages__HireUs_form">
+                  <div class="Checkbox__container">
+                     <div class="checkbox__wrapper">
+                        <input type="checkbox" name="AppDesign" id="AppDesign" class="checkbox">
+                        <label for="AppDesign" class="checkbox__label">
+                           <span>App Design</span>
+                        </label>
+                     </div>
+
+                     <div class="checkbox__wrapper">
+                        <input type="checkbox" name="AppDesign" id="GraphicDesign" class="checkbox">
+                        <label for="GraphicDesign" class="checkbox__label">
+                           <span>Graphic Design</span>
+                        </label>
+                     </div>
+
+                     <div class="checkbox__wrapper">
+                        <input type="checkbox" name="AppDesign" id="MotionDesign" class="checkbox">
+                        <label for="MotionDesign" class="checkbox__label">
+                           <span>Motion Design</span>
+                        </label>
+                     </div>
+
+                     <div class="checkbox__wrapper">
+                        <input type="checkbox" name="AppDesign" id="UXDesign" class="checkbox">
+                        <label for="UXDesign" class="checkbox__label">
+                           <span>UX Design</span>
+                        </label>
+                     </div>
+
+                     <div class="checkbox__wrapper">
+                        <input type="checkbox" name="AppDesign" id="Webdesign" class="checkbox">
+                        <label for="Webdesign" class="checkbox__label">
+                           <span>Webdesign</span>
+                        </label>
+                     </div>
+
+                     <div class="checkbox__wrapper">
+                        <input type="checkbox" name="AppDesign" id="Marketing" class="checkbox">
+                        <label for="Marketing" class="checkbox__label">
+                           <span>Marketing</span>
+                        </label>
+                     </div>
+                  </div>
+
+                  <div class="input__container">
+                     <div class="input__wrapper">
+                        <input required type="text" id="nameInput" class="input__wrapper_input">
+                        <label for="nameInput">Name</label>
+                     </div>
+
+                     <div class="input__wrapper">
+                        <input required type="email" id="nameEmail" class="input__wrapper_input">
+                        <label for="nameEmail">Email</label>
+                     </div>
+                  </div>
+
+                  <button class="btn btn--submit">Send request</button>
+               </form>
+            </section>
+         </article>
+
+      </main>
+   </div>
+
+
+
+   <!-- script -->
+   <script src='js/index.js'></script>
+   <script src='js/about_page.js'></script>
+   <script src='js/Hire_us.js'></script>
+
+</body>
+
+</html>
