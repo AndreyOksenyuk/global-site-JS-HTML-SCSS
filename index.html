@@ -64,7 +64,7 @@
          <aside class="dotsAside">
             <div class="dotsAside__line">
 
-               <div class="circle circle--main circle--home " data-pageName="Home" data-pageNamber='01'>
+               <div class="circle circle--main circle--home" data-pageName="Home" data-pageNamber='01'>
                   <div class="circle__click" data-className="pages__Home"></div>
                </div>
 
@@ -88,7 +88,7 @@
                <div class="circle"></div>
                <div class="circle"></div>
 
-               <div class="circle circle--main  circle--contact" data-pageName="Contact" data-pageNamber='04'>
+               <div class="circle circle--main  circle--contact active" data-pageName="Contact" data-pageNamber='04'>
                   <div class="circle__click" data-className="pages__Contact"></div>
                </div>
 
@@ -96,7 +96,7 @@
                <div class="circle"></div>
                <div class="circle"></div>
 
-               <div class="circle circle--main circle--hireUs active" data-pageName="Hire Us" data-pageNamber='05'>
+               <div class="circle circle--main circle--hireUs" data-pageName="Hire Us" data-pageNamber='05'>
                   <div class="circle__click" data-className="pages__HireUs"></div>
                </div>
 
@@ -105,7 +105,7 @@
          <article class="pages">
 
             <!-- page HOME -->
-            <section class="page pages__Home ">
+            <section class="page pages__Home">
                <div class="pages__Home_top">
                   <h3>Your next interactive experience</h3>
                   <img src="./img/Home_page/astronaut.png" alt="astronaut">
@@ -138,7 +138,42 @@
 
             <!-- page WORKS -->
             <section class="page pages__Works">
-               <h3>Works</h3>
+               <div class="pages__Works_slider">
+                  <div class="slider__item active">
+                     <img src="./img/Works_page/Layer-1.jpg" alt="">
+                     <h5 class="title">Metiew & Smith</h5>
+                     <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                  </div>
+                  <div class="slider__item prev">
+                     <img src="./img/Works_page/Layer-3.jpg" alt="">
+                     <h5 class="title">Voctory</h5>
+                     <p class="text">Reprehenderit officia repellat quidem laborum?</p>
+                  </div>
+                  <div class="slider__item next">
+                     <img src="./img/Works_page/Layer-2.jpg" alt="">
+                     <h5 class="title">Alex Novak</h5>
+                     <p class="text">Optio minima placeat tenetur repellat praesentium, labore totam! </p>
+                  </div>
+                  <div class="slider__item hidden">
+                     <img src="./img/About_page/history.jpg" alt="">
+                     <h5 class="title">Metiew</h5>
+                     <p class="text">Tempore omnis culpa quod illo exercitationem deleniti quas dolor aut alias maxime blanditiis magnam! Impedit deleniti eius quo repellendus.</p>
+                  </div>
+               </div>
+
+               <div class="slider__arrow">
+                  <button class="slider__arrow_left">
+                     <svg class="arrows_svg">
+                        <use xlink:href="#arrows"></use>
+                     </svg>
+                  </button>
+                  <button class="slider__arrow_rigth">
+                     <svg class="arrows_svg">
+                        <use xlink:href="#arrows"></use>
+                     </svg>
+                  </button>
+               </div>
+
             </section>
 
             <!-- page ABOUT -->
@@ -163,15 +198,15 @@
 
                <div class="pages__About_bottom">
                   <div class="About__bottom_inner">
-                     <img src="/img/About_page/winners.jpg" alt="history">
+                     <img src="./img/About_page/winners.jpg" alt="history">
                      <h5>Winners</h5>
                   </div>
                   <div class="About__bottom_inner">
-                     <img src="/img/About_page/philosophy.jpg" alt="history">
+                     <img src="./img/About_page/philosophy.jpg" alt="history">
                      <h5>Philosophy</h5>
                   </div>
                   <div class="About__bottom_inner">
-                     <img src="/img/About_page/history.jpg" alt="history">
+                     <img src="./img/About_page/history.jpg" alt="history">
                      <h5>History</h5>
                   </div>
                </div>
@@ -179,12 +214,12 @@
             </section>
 
             <!-- page CONTACT -->
-            <section class="page pages__Contact">
-               <h3>Contacts</h3>
+            <section class="page pages__Contact active">
+
             </section>
 
             <!-- page HIRE US -->
-            <section class="page pages__HireUs active">
+            <section class="page pages__HireUs">
                <h4 class="pages__HireUs_title">You want us to do</h4>
                <form class="pages__HireUs_form">
                   <div class="Checkbox__container">
@@ -251,12 +286,11 @@
       </main>
    </div>
 
-
-
    <!-- script -->
    <script src='js/index.js'></script>
+   <script src='js/works_page.js'></script>
    <script src='js/about_page.js'></script>
-   <script src='js/Hire_us.js'></script>
+   <script src='js/hire_us.js'></script>
 
 </body>
 
