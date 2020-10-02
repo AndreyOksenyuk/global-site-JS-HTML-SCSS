@@ -48,6 +48,68 @@ body {
    padding: 0 45px;
 }
 
+//======Button ======================
+.btn {
+   position: relative;
+   color: #fff;
+   background-color: rgba(255, 255, 255, 0);
+   padding: 10px 15px;
+   border: none;
+   border: 2px solid $colorBlue;
+   font-family: $fontProximaLt;
+   font-weight: bold;
+   letter-spacing: 2px;
+   text-transform: uppercase;
+   outline: none;
+   cursor: pointer;
+   z-index: 2;
+
+   &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 50%;
+      background-color: $colorBlue;
+      transition: all 0.2s linear;
+      z-index: -1;
+   }
+
+   &::before {
+      @extend .btn::after;
+      right: 0;
+      left: 50%;
+   }
+
+   &:hover {
+      &:after {
+         right: 100%;
+      }
+
+      &:before {
+         left: 100%;
+      }
+   }
+
+   &:active {
+      background-color: #0f33ff33;
+   }
+
+   &:disabled {
+      border: none;
+
+      &::after {
+         background-color: #ccc;
+         left: 0;
+      }
+
+      &::before {
+         background-color: #ccc;
+      }
+   }
+}
+
 //Header
 .header {
    position: fixed;
@@ -344,7 +406,7 @@ body {
       height: 100%;
       color: #fff;
       visibility: hidden;
-      padding-left: 150px;
+      padding-left: 200px;
    }
 
    .page.active {
@@ -600,86 +662,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//======Button ======================
-.btn {
-   position: relative;
-   color: #fff;
-   background-color: rgba(255, 255, 255, 0);
-   padding: 10px 15px;
-   border: none;
-   border: 2px solid $colorBlue;
-   font-family: $fontProximaLt;
-   font-weight: bold;
-   letter-spacing: 2px;
-   text-transform: uppercase;
-   outline: none;
-   cursor: pointer;
-   z-index: 2;
-
-   &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 50%;
-      background-color: $colorBlue;
-      transition: all 0.2s linear;
-      z-index: -1;
-   }
-
-   &::before {
-      @extend .btn::after;
-      right: 0;
-      left: 50%;
-   }
-
-   &:hover {
-      &:after {
-         right: 100%;
-      }
-
-      &:before {
-         left: 100%;
-      }
-   }
-
-   &:active {
-      background-color: #0f33ff33;
-   }
-
-   &:disabled {
-      border: none;
-
-      &::after {
-         background-color: #ccc;
-         left: 0;
-      }
-
-      &::before {
-         background-color: #ccc;
-      }
-   }
-}
-
 .btn__whithArrows {
    position: relative;
    display: flex;
@@ -728,10 +710,11 @@ body {
 .pages__About {
    width: 100%;
    height: 100%;
-   background-image: url('../img/About_page/black_woman.png');
+   background-image: url('../img/About_page/black_woman.webp');
    background-repeat: no-repeat;
    background-size: 530px;
-   background-position: 500px 55px;
+   background-position: right;
+   // background-position: 500px 55px;
    margin-top: 70px;
 
    &_top {
@@ -841,13 +824,13 @@ body {
    padding-left: 0 !important;
 
    &_map {
+      position: relative;
       width: 100%;
       height: 100%;
 
       img {
          width: 100%;
          height: 100%;
-         object-fit: cover;
       }
 
       &--location {
@@ -855,8 +838,8 @@ body {
          justify-content: center;
          align-items: center;
          position: absolute;
-         top: 49%;
-         left: 48%;
+         top: 44%;
+         left: 37%;
          width: 70px;
          height: 70px;
          border-radius: 50%;
@@ -940,7 +923,7 @@ body {
 
 @keyframes locationsAnim {
    0% {
-      transform: scale(0.4);
+      transform: scale(0.3);
       background-color: #0f33ff00;
    }
 
