@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'Proxima Nova Bl';
   src: url("../fonts/Proxima_NovaBl.otf");
@@ -272,15 +273,19 @@ body {
 }
 
 .dotsAside {
+  position: absolute;
+  left: 50px;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 15%;
+  width: 10%;
   height: 100%;
   padding-left: 30px;
+  z-index: 9;
 }
 
 .dotsAside__line {
@@ -359,7 +364,7 @@ body {
 
 .pages {
   position: relative;
-  width: 85%;
+  width: 100%;
   height: 100%;
   overflow: hidden;
 }
@@ -374,6 +379,7 @@ body {
   height: 100%;
   color: #fff;
   visibility: hidden;
+  padding-left: 150px;
 }
 
 .pages .page.active {
@@ -701,11 +707,11 @@ body {
 }
 
 .slider__arrow_left {
-  left: 0;
+  left: -50px;
 }
 
 .slider__arrow_rigth {
-  right: 0;
+  right: -50px;
 }
 
 .slider__arrow_rigth .arrows_svg {
@@ -955,6 +961,155 @@ body {
   height: 15px;
   -webkit-clip-path: polygon(0 50%, 100% 100%, 100% 0);
           clip-path: polygon(0 50%, 100% 100%, 100% 0);
+}
+
+.pages__Contact {
+  padding-left: 0 !important;
+}
+
+.pages__Contact_map {
+  width: 100%;
+  height: 100%;
+}
+
+.pages__Contact_map img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.pages__Contact_map--location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 49%;
+  left: 48%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #0f33ff59;
+  -webkit-animation: locationsAnim 2s linear infinite;
+          animation: locationsAnim 2s linear infinite;
+}
+
+.pages__Contact_map--location div {
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  background-color: #0f33ff;
+}
+
+.pages__Contact_contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 50%;
+  right: 150px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 320px;
+  height: 380px;
+  background-color: #000;
+  -webkit-box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.79);
+          box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.79);
+  font-family: "Proxima Nova Bl";
+  font-size: 14px;
+}
+
+.pages__Contact_contact address {
+  font-style: normal;
+}
+
+.pages__Contact_contact .phone-email {
+  color: #fff;
+  text-decoration: none;
+  margin-top: 20px;
+  -webkit-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+}
+
+.pages__Contact_contact .phone-email:hover {
+  color: #c9d4f8;
+}
+
+.pages__Contact_contact .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 24px;
+  min-width: 50%;
+  text-decoration: none;
+}
+
+.pages__Contact_contact .btn--bёhance {
+  border: 2px solid #1769ff;
+}
+
+.pages__Contact_contact .btn--bёhance::after, .pages__Contact_contact .btn--bёhance::before {
+  background-color: #1769ff;
+}
+
+.pages__Contact_contact .btn--dribbble {
+  border: 2px solid #ea4c89;
+}
+
+.pages__Contact_contact .btn--dribbble::after, .pages__Contact_contact .btn--dribbble::before {
+  background-color: #ea4c89;
+}
+
+.pages__Contact_contact .btn--dribbble:active {
+  background-color: #ea4c893a;
+}
+
+@-webkit-keyframes locationsAnim {
+  0% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+    background-color: #0f33ff00;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    background-color: #0f33ff59;
+  }
+}
+
+@keyframes locationsAnim {
+  0% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+    background-color: #0f33ff00;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    background-color: #0f33ff59;
+  }
 }
 
 .pages__HireUs {

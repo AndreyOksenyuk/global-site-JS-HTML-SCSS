@@ -83,7 +83,7 @@ function addActiveClassDots(attr) {
          parent.classList.add('active')
       }
 
-      
+
       if (className === attr) {
          toggleClassActiveDotsNavigations()
       }

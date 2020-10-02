@@ -41,6 +41,7 @@ body {
    background-color: $BlackBackground;
 }
 
+
 .container {
    position: relative;
    width: 100%;
@@ -248,11 +249,15 @@ body {
 
 //Aside 
 .dotsAside {
+   position: absolute;
+   left: 50px;
+   top: 0;
    display: flex;
    align-items: center;
-   width: 15%;
+   width: 10%;
    height: 100%;
    padding-left: 30px;
+   z-index: 9;
 
    &__line {
       display: flex;
@@ -325,7 +330,7 @@ body {
 //Pages
 .pages {
    position: relative;
-   width: 85%;
+   width: 100%;
    height: 100%;
    overflow: hidden;
 
@@ -339,6 +344,7 @@ body {
       height: 100%;
       color: #fff;
       visibility: hidden;
+      padding-left: 150px;
    }
 
    .page.active {
@@ -580,11 +586,11 @@ body {
    }
 
    &_left {
-      left: 0;
+      left: -50px;
    }
 
    &_rigth {
-      right: 0;
+      right: -50px;
 
       .arrows_svg {
          transform: rotate(180deg);
@@ -826,6 +832,121 @@ body {
       width: 15px;
       height: 15px;
       clip-path: polygon(0 50%, 100% 100%, 100% 0);
+   }
+}
+
+
+//Contact
+.pages__Contact {
+   padding-left: 0 !important;
+
+   &_map {
+      width: 100%;
+      height: 100%;
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+
+      &--location {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         position: absolute;
+         top: 49%;
+         left: 48%;
+         width: 70px;
+         height: 70px;
+         border-radius: 50%;
+         background-color: #0f33ff59;
+         animation: locationsAnim 2s linear infinite;
+
+         div {
+            width: 60%;
+            height: 60%;
+            border-radius: 50%;
+            background-color: #0f33ff;
+         }
+      }
+   }
+
+   &_contact {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      top: 50%;
+      right: 150px;
+      transform: translateY(-50%);
+      width: 320px;
+      height: 380px;
+      background-color: #000;
+      box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.79);
+
+      font-family: $fontProximaBl;
+      font-size: 14px;
+
+      address {
+         font-style: normal;
+      }
+
+      .phone-email {
+         color: #fff;
+         text-decoration: none;
+         margin-top: 20px;
+         transition: color 0.1s linear;
+
+         &:hover {
+            color: rgb(201, 212, 248);
+         }
+
+      }
+
+      .btn {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin-top: 24px;
+         min-width: 50%;
+         text-decoration: none;
+      }
+
+      .btn--bёhance {
+         border: 2px solid #1769ff;
+
+         &::after,
+         &::before {
+            background-color: #1769ff;
+         }
+      }
+
+      .btn--dribbble {
+         border: 2px solid #ea4c89;
+
+         &::after,
+         &::before {
+            background-color: #ea4c89;
+         }
+
+         &:active {
+            background-color: #ea4c893a;
+         }
+      }
+   }
+}
+
+@keyframes locationsAnim {
+   0% {
+      transform: scale(0.4);
+      background-color: #0f33ff00;
+   }
+
+   100% {
+      transform: scale(1);
+      background-color: #0f33ff59;
    }
 }
 
